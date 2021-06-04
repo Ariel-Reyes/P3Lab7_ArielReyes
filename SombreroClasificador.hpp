@@ -19,7 +19,7 @@ class SombreroClasificador
 		SombreroClasificador();
 		~SombreroClasificador();
 		ClaseHogwarts* clasificar_magos_nuevos(vector<Mago*> ma,int year);
-
+        void imprimir_casa(vector<Mago*>); 
 };
 
 #endif
