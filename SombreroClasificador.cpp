@@ -8,7 +8,7 @@ SombreroClasificador::~SombreroClasificador()
 {
 }
 
- ClaseHogwarts* clasificar_magos_nuevos(vector<Mago*> ma,int year){
+ ClaseHogwarts* SombreroClasificador::clasificar_magos_nuevos(vector<Mago*> ma,int year){
  	int prom_mh=0; 
  	int prom_ms=0; 
  	int prom_mr=0;
@@ -18,7 +18,7 @@ SombreroClasificador::~SombreroClasificador()
  		const type_info& tipo = typeid(*ma[i]);
  		cout<<tipo.name()<<endl; 
 	 } 
-	 
+ 
 	for(int i=0;i<ma.size();i++){
 		MagoHufflepuff* mh = dynamic_cast<MagoHufflepuff*>(ma[i]);
 		MagoSlytherin* ms = dynamic_cast<MagoSlytherin*>(ma[i]);
@@ -79,10 +79,15 @@ SombreroClasificador::~SombreroClasificador()
 		
 	} 
 	 
-	 return ch; 
+ return ch; 
 	 
  	
  	
- 	
- 	
  };
+ 	
+ 
+ 
+ 
+ 
+ 
+ 

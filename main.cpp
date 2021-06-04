@@ -6,22 +6,30 @@
 #include "MagoRavenclaw.hpp"
 #include "MagoGryffindor.hpp"
 #include "ClaseHogwarts.hpp"
+#include "SombreroClasificador.hpp"
 #include <vector>
 using namespace std; 
 vector<Mago*> generar_magos();
 int main() {
 	srand(time(NULL));
 vector<Mago*> lista_mago = generar_magos();
-
+SombreroClasificador* sc = new SombreroClasificador();
+     
+ClaseHogwarts* a = sc->clasificar_magos_nuevos(lista_mago,2000); 
 	 
 
 	return 0;
 }
 
 vector<Mago*> generar_magos(){
-	srand(time(NULL));
+//	srand(time(NULL));
+      int a=0; 
+      vector<Mago*> lista_mago;
+      while(a<20){
+	 
+
 		 double num_ra = rand()%100; 
-	vector<Mago*> lista_mago;
+	
 	num_ra /= 100; 
 	 
 	 if(num_ra>=0 && num_ra<=0.25){
@@ -45,8 +53,8 @@ vector<Mago*> generar_magos(){
 	 }
 	 
 	 
-	 
-	
+ a++; 	 
+}
 	return lista_mago; 
 	
 }; 

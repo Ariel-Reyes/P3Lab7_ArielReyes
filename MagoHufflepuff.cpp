@@ -1,7 +1,7 @@
 #include "MagoHufflepuff.hpp"
 
 MagoHufflepuff::MagoHufflepuff() {
-	srand(time(NULL));
+	
 	int as_rand = 0 + rand()%100;
 	this->set_astucia(as_rand);
 	int inte_rand = 0 + rand()%100;
